@@ -15,23 +15,30 @@ require_once("config.inc.php");
 <header class="mb-3">
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="<?=SITE_URL;?>">Zoologik</a>
+            <a class="navbar-brand" href="<?= SITE_URL; ?>">ZooLogik</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?=SITE_URL;?>">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="<?= SITE_URL; ?>">Accueil</a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Employés
                         </a>
                         <ul class="dropdown-menu shadow">
-                            <li><a class="dropdown-item" href=<?=SITE_URL;?>/employe/liste.php>Liste des employés</a></li>
-                            <li><a class="dropdown-item" href=<?=SITE_URL;?>/employe/create.php>Ajouter un employé</a></li>
+                            <li><a class="dropdown-item" href="<?= SITE_URL;?>/employe/liste.php">Liste des employés</a></li>
+                            <li><a class="dropdown-item" href="<?= SITE_URL; ?>/employe/create.php">Ajouter un employé</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menace                            </a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="<?= SITE_URL;?>/menace/liste.php">Liste des menaces</a></li>
+                            <li><a class="dropdown-item" href="<?= SITE_URL; ?>/menace/create-update.php">Ajouter une menace</a></li>
                         </ul>
                     </li>
                 </ul>
