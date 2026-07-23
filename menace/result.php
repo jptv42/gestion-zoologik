@@ -17,7 +17,10 @@ require_once("../header.php");
                         break;
                     case 'update':
                         $sql="UPDATE menace SET libelle_menace = :libelle WHERE id_menace = :id";
-                        $params = [':libelle' => $_POST['libelle'],':id' => $_POST['id']];
+                        $params = [
+                                    ':libelle' => $_POST['libelle'],
+                                    ':id' => $_POST['id']
+                                ];
                         $phrase_reussite .= "modifiée.";
                         break;
                     case 'delete':
