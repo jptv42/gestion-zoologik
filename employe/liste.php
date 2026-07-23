@@ -16,36 +16,36 @@ require_once("../header.php");
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <table class="table table-hover">
-                    <thead>
-                    <th>#</th>
-                    <th>Nom</th>
-                    <th>Prenom</th>
-                    <th>Poste</th>
-                    <th>Actions</th>
-                    </thead>
-                    <tbody>
-                    <?php
-                    $stmt = $db->query("SELECT * FROM employe");
-                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    foreach($rows as $employe) :
+            <div class="row">
+                <div class="col">
+                    <table class="table table-hover">
+                        <thead>
+                        <th>#</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Poste</th>
+                        <th>Actions</th>
+                        </thead>
+                        <tbody>
+                        <?php
+                        $stmt = $db->query("SELECT * FROM employe");
+                        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        foreach($rows as $employe) :
+                            ?>
+                            <tr>
+                                <td><?= $employe['id_employe'] ;?></td>
+                                <td><?= $employe['nom_emp'] ;?></td>
+                                <td><?= $employe['prenom_emp'] ;?></td>
+                                <td><?= $employe['poste_emp'] ;?></td>
+                                <td><a class="link-primary" href="<?= SITE_URL; ?>/employe/update.php?id=<?= $employe['id_employe'] ;?>"><i class="fa-solid fa-pencil"></i></a> <a class="link-danger" href="<?= SITE_URL; ?>/employe/result-delete.php?id=<?= $employe['id_employe'] ;?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer l\'employé ?')"><i class="fa-solid fa-trash-alt"></i></a></td>
+                            </tr>
+                        <?php
+                        endforeach;
                         ?>
-                        <tr>
-                            <td><?= $employe['id_employe'] ;?></td>
-                            <td><?= $employe['nom_emp'] ;?></td>
-                            <td><?= $employe['prenom_emp'] ;?></td>
-                            <td><?= $employe['poste_emp'] ;?></td>
-                            <td><a class="link-primary" href="<?= SITE_URL; ?>/employe/update.php?id=<?= $employe['id_employe'] ;?>"><i class="fa-solid fa-pencil"></i></a> <a class="link-danger" href="<?= SITE_URL; ?>/employe/result-delete.php?id=<?= $employe['id_employe'] ;?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer l\'employé ?')"><i class="fa-solid fa-trash-alt"></i></a></td>
-                        </tr>
-                    <?php
-                    endforeach;
-                    ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
     </div>
 <?php
 require_once("../footer.php");
