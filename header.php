@@ -22,11 +22,11 @@ require_once("config.inc.php");
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?= SITE_URL; ?>">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="<?= SITE_URL; ?>"><i class="fa-solid fa-house"></i> Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Employés
+                            <i class="fa-solid fa-users"></i> Employés
                         </a>
                         <ul class="dropdown-menu shadow">
                             <li><a class="dropdown-item" href="<?= SITE_URL;?>/employe/liste.php">Liste des employés</a></li>
@@ -35,10 +35,38 @@ require_once("config.inc.php");
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Menace                            </a>
+                            <i class="fa-solid fa-skull-crossbones"></i> Menaces
+                        </a>
                         <ul class="dropdown-menu shadow">
                             <li><a class="dropdown-item" href="<?= SITE_URL;?>/menace/liste.php">Liste des menaces</a></li>
                             <li><a class="dropdown-item" href="<?= SITE_URL; ?>/menace/create-update.php">Ajouter une menace</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-utensils"></i> Aliments
+                        </a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="<?= SITE_URL;?>/aliment/liste.php">Liste des aliments</a></li>
+                            <li><a class="dropdown-item" href="<?= SITE_URL; ?>/aliment/create-update.php">Ajouter un aliment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-globe"></i> Géographie
+                        </a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="<?= SITE_URL;?>/geographie/liste.php">Liste des zones géographique</a></li>
+                            <li><a class="dropdown-item" href="<?= SITE_URL; ?>/geographie/create-update.php">Ajouter un zone géographique</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-children"></i> Famille
+                        </a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="<?= SITE_URL;?>/famille/liste.php">Liste des familles</a></li>
+                            <li><a class="dropdown-item" href="<?= SITE_URL; ?>/famille/create-update.php">Ajouter une famille</a></li>
                         </ul>
                     </li>
                 </ul>
